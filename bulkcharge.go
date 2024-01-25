@@ -27,8 +27,8 @@ type BulkChargeRequest struct {
 
 // BulkItem represents a single bulk charge request item
 type BulkItem struct {
-	Authorization string  `json:"authorization,omitempty"`
-	Amount        float32 `json:"amount,omitempty"`
+	Authorization string `json:"authorization,omitempty"`
+	Amount        int    `json:"amount,omitempty"`
 }
 
 // BulkChargeBatchList is a list object for bulkcharges.

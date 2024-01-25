@@ -17,7 +17,7 @@ type Page struct {
 	Name         string              `json:"name,omitempty"`
 	Slug         string              `json:"slug,omitempty"`
 	Description  string              `json:"description,omitempty"`
-	Amount       float32             `json:"amount,omitempty"`
+	Amount       int                 `json:"amount,omitempty"`
 	Currency     string              `json:"currency,omitempty"`
 	Active       bool                `json:"active,omitempty"`
 	RedirectURL  string              `json:"redirect_url,omitempty"`
@@ -33,7 +33,7 @@ type PageList struct {
 // Create creates a new page
 // For more details see https://developers.paystack.co/v1.0/reference#create-page
 func (s *PageService) Create(page *Page) (*Page, error) {
-	u := fmt.Sprintf("/page")
+	u := "/page"
 	pg := &Page{}
 	err := s.client.Call("POST", u, page, pg)
 

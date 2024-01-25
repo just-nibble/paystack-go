@@ -17,7 +17,7 @@ type Plan struct {
 	Name              string  `json:"name,omitempty"`
 	Description       string  `json:"description,omitempty"`
 	PlanCode          string  `json:"plan_code,omitempty"`
-	Amount            float32 `json:"amount,omitempty"`
+	Amount            int     `json:"amount,omitempty"`
 	Interval          string  `json:"interval,omitempty"`
 	SendInvoices      bool    `json:"send_invoices,omitempty"`
 	SendSMS           bool    `json:"send_sms,omitempty"`
